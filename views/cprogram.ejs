@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C Programming - LearnHub</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background: #f4f4f9;
+      color: #2c3e50;
+    }
+
+    h1, h2 {
+      font-weight: bold;
+    }
+
+    /* Navbar Styling */
+    nav {
+      background: #2c3e50;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 0 1.5rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 0.5rem;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+
+      color: #74ebd5;
+
+    }
+
+    /* Main Content */
+    .course-details {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .course-details h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .course-details p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    /* Syllabus Section */
+    .syllabus {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .syllabus ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .syllabus li {
+      padding: 1rem;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .syllabus li:hover {
+      background-color: #ecf0f1;
+    }
+
+    .syllabus button {
+      padding: 0.3rem 0.6rem;
+      background: #2c3e50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    .syllabus button:hover {
+      background: #74ebd5;
+      color: #2c3e50;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #2c3e50;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin: 1rem 0;
+      }
+
+      .course-details {
+        padding: 2rem 1rem;
+      }
+
+      .course-details h1 {
+        font-size: 2rem;
+      }
+
+      .syllabus li {
+        padding: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">LearnHub</div>
+    <ul>
+      <li><a href="/Home?email=<%=email%>">Home</a></li>
+      <li><a href="#" id="Syllabus">Syllabus</a></li>
+    </ul>
+  </nav>
+
+  <!-- Course Details Section -->
+  <div class="course-details" id="Syllabus">
+    <h1>C Programming</h1>
+    <p>
+      Master the fundamentals of C programming, including algorithms, data structures, and memory management.
+    </p>
+
+    <h2>Syllabus</h2>
+    <div class="syllabus">
+      <ul>
+        <li>Introduction to C Programming <a href="/course/C%20Programming/Introduction/<%=email%>"><button>Explore</button></a></li>
+        <li>Variables, Data Types, and Operators <button>Explore</button></li>
+        <li>Control Structures (if-else, loops) <button>Explore</button></li>
+        <li>Functions and Recursion <button>Explore</button></li>
+        <li>Arrays and Strings <button>Explore</button></li>
+        <li>Pointers and Memory Management <button>Explore</button></li>
+        <li>Structures and Unions <button>Explore</button></li>
+        <li>File Handling in C <button>Explore</button></li>
+        <li>Advanced Topics and Projects <button>Explore</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 LearnHub. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

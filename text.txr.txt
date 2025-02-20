@@ -1,0 +1,7 @@
+ Skill Exchange Platform
+Description: Build a platform where users can trade skills (e.g., language learning, coding, music lessons) instead of money.
+Features:
+Skill listing and searching.
+Chat system for collaboration.
+Skill rating and endorsements.
+Calendar integration for scheduling sessions.

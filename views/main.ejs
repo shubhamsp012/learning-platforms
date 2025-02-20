@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learning Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">LearnHub</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="/courses/<%=email%>">Courses</a></li>
+      <li><a href="/Home/About/<%= email ? email : 'default' %>">About</a></li>
+      <div id="email">
+        <% if (email) { %>
+          <a href="/Profile/<%= email %>"><%= email[0].toUpperCase() %></a>
+        <% } else { %>
+          <span>No email</span>
+        <% } %>
+      </div>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>Welcome to LearnHub</h1>
+    <p>Master programming languages like C, Java, and Python.</p>
+    <a href="#courses" class="btn">Explore Courses</a>
+  </header>
+
+  <section id="courses" class="courses">
+    <h2>Our Courses</h2>
+    <div class="course-list">
+      <div class="course-card">
+        <h3>C Programming</h3>
+        <p>Learn the fundamentals of C programming, including algorithms and data structures.</p>
+        <a href="/Home/c-programing" class="btn">Learn More</a>
+      </div>
+      <div class="course-card">
+        <h3>Java Programming</h3>
+        <p>Build robust applications using Java, from basic syntax to advanced frameworks.</p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+      <div class="course-card">
+        <h3>Python Programming</h3>
+        <p>Discover Python for data science, web development, and automation.</p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 LearnHub. All rights reserved.</p>
+  </footer>
+</body>
+</html>

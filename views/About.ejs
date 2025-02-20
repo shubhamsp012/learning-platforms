@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - LearnHub</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background: #f4f4f9;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #2c3e50;
+      color: white;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .navbar .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .navbar .nav-links a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .navbar .nav-links a:hover {
+      color: #74ebd5;
+    }
+
+    .about-container {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-container h1 {
+      margin-bottom: 1rem;
+    }
+
+    .about-container p {
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .feedback-form {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background: white;
+    }
+
+    .feedback-form h2 {
+      margin-bottom: 1rem;
+    }
+
+    .feedback-form input,
+    .feedback-form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .feedback-form button {
+      padding: 0.5rem 1rem;
+      background: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .feedback-form button:hover {
+      background: #74ebd5;
+      color: #2c3e50;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #2c3e50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">LearnHub</div>
+    <ul class="nav-links">
+      <li><a href="/Home?email=<%= email %>">Home</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="about-container">
+    <h1>About LearnHub</h1>
+    <p>
+      Welcome to LearnHub! We are dedicated to providing high-quality programming education.
+      Our mission is to make coding accessible to everyone through engaging and interactive courses.
+    </p>
+    <p>
+      At LearnHub, we believe in empowering learners with the knowledge and tools to succeed in the modern world.
+      Whether you're a beginner or an experienced programmer, our courses are designed to meet your needs.
+    </p>
+
+    <div class="feedback-form">
+      <h2>Feedback Form</h2>
+      <form action="/About/feedbacksubmit/<%=email%>" method="post">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" value="<%=email %>" required  /> 
+        <textarea rows="5" name="feedback"  placeholder="Your Feedback" required ></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 LearnHub. All rights reserved.</p>
+  </footer>
+</body>
+</html>

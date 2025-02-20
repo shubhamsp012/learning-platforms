@@ -1,0 +1,206 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #333, #000); /* Dark gradient background */
+  color: #f4f4f4; /* Light text color for contrast */
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #111; /* Dark background */
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.navbar .nav-links li {
+  margin-left: 20px;
+}
+
+.navbar .nav-links a {
+  font-size: 1.1rem;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  background-color: #444; /* Lighter dark shade */
+}
+
+#email {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+#email a {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 50%;
+  padding: 2px;
+  background-color: #444;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+
+}
+
+#email a:hover {
+  background-color: #0056b3;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('your-image.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero .btn {
+  background-color: #ff5722;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+  background-color: #e64a19;
+}
+
+/* Courses Section */
+.courses {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #222; /* Darker background for contrast */
+}
+
+.courses h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.course-card {
+  background-color: #333; /* Dark card background */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.course-card p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+.course-card .btn {
+  background-color: #007bff;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.course-card .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+.footer {
+  background-color: #111; /* Dark footer background */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: block;
+    text-align: center;
+  }
+
+  .navbar .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .courses h2 {
+    font-size: 2rem;
+  }
+
+  .course-list {
+    grid-template-columns: 1fr;
+  }
+}

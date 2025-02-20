@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction to C Programming - LearnHub</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background: #f4f4f9;
+      color: #2c3e50;
+    }
+
+    h1, h2, h3 {
+      font-weight: bold;
+    }
+
+    nav {
+      background: #2c3e50;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 0 1.5rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 0.5rem;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #74ebd5;
+    }
+
+    .content {
+      padding: 3rem 2rem;
+    }
+
+    .content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .quiz-btn {
+      padding: 0.7rem 1.5rem;
+      font-size: 1.1rem;
+      background: #2c3e50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 2rem;
+    }
+
+    .quiz-btn:hover {
+      background: #74ebd5;
+      color: #2c3e50;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #2c3e50;
+      color: white;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">LearnHub</div>
+    <ul>
+      <li><a href="/Home?email=<%= email %>">Home</a></li>
+      <li><a href="/Home/c-programing/<%=email%>">Syllabus</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <h1>Introduction to C Programming</h1>
+    <p>C programming is a powerful general-purpose programming language developed by Dennis Ritchie in 1972. It is widely used for system programming, game development, and embedded systems.</p>
+
+    <h2>Why Learn C Programming?</h2>
+    <p>C is considered the foundation of modern programming languages. Learning C helps in understanding how programming languages work at a lower level and provides better control over hardware.</p>
+
+    <h2>Features of C</h2>
+    <ul>
+      <li>Simple and easy to learn</li>
+      <li>Fast and efficient</li>
+      <li>Low-level memory manipulation</li>
+      <li>Portability across platforms</li>
+      <li>Rich set of built-in functions and libraries</li>
+    </ul>
+
+    <h2>Applications of C</h2>
+    <ul>
+      <li>Operating Systems</li>
+      <li>Embedded Systems</li>
+      <li>Game Development</li>
+      <li>Database Systems</li>
+      <li>Compilers and Interpreters</li>
+    </ul>
+
+    <h2>Basic Structure of a C Program</h2>
+    <pre>
+#include <stdio.h>
+
+int main() {
+  printf("Hello, World!\n");
+  return 0;
+}
+    </pre>
+    <p>This is a simple C program that prints "Hello, World!" to the console.</p>
+
+    <h2>Key Components:</h2>
+    <ul>
+      <li><b>#include <stdio.h></b> - Includes the standard input-output library.</li>
+      <li><b>main()</b> - The starting point of any C program.</li>
+      <li><b>printf()</b> - A function to display output.</li>
+      <li><b>return 0;</b> - Indicates successful program termination.</li>
+    </ul>
+
+  <a href="/course/C%20Programming/Quiz/<%=email%>"class="quiz-btn">Take Quiz</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 LearnHub. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<style>
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f4f4f9;
+    color: #2c3e50;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #2c3e50;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    background: #74ebd5;
+    color: #2c3e50;
+    border-radius: 5px;
+  }
+  
+  /* Course Section Styles */
+  .courses {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 0 2rem;
+  }
+  
+  .course-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .course-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .course-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn {
+    padding: 0.5rem 1rem;
+    background: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #74ebd5;
+    color: #2c3e50;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .nav-links li {
+      padding: 0.5rem 0;
+    }
+  
+    .course-list {
+      padding: 0;
+    }
+  }
+  
+</style>
+
+    <nav class="navbar">
+        <div class="logo">LearnHub</div>
+        <ul class="nav-links">
+          <li><a href="/Home?email=<%=email%>">Home</a></li>
+          <li><a href="/courses/<%=email%>">Courses</a></li>
+        </ul>
+      </nav>
+    
+  <section id="courses" class="courses">
+    <h2>Our Courses</h2>
+    <div class="course-list">
+      <div class="course-card">
+        <h3>C Programming</h3>
+        <p>Learn the fundamentals of C programming, including algorithms and data structures.</p>
+        <a href="/course/C%20Programming/<%=email%>" class="btn" name="C programing">Learn More</a>
+      </div>
+      <div class="course-card">
+        <h3>Java Programming</h3>
+        <p>Build robust applications using Java, from basic syntax to advanced frameworks.</p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+      <div class="course-card">
+        <h3>Python Programming</h3>
+        <p>Discover Python for data science, web development, and automation.</p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

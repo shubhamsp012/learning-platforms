@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Page</title>
+  <link rel="stylesheet" href="styles.css" />  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #acb6e5);
+      color: #333;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #2c3e50;
+      color: white;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .navbar .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .navbar .nav-links a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .navbar .nav-links a:hover {
+      color: #74ebd5;
+    }
+
+    .profile-section {
+      padding: 2rem;
+      text-align: center;
+      background: white;
+      margin: 2rem auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+    }
+
+    .profile-section h2 {
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    .profile-section p {
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">LearnHub</div>
+    <ul class="nav-links">
+    <li><a href="/Home?email=<%= email %>">Home</a></li>
+      <li><a href="/Profile/<%=email%>">Profile</a></li>
+    </ul>
+  </nav>
+
+  <section id="profile" class="profile-section">
+    <h2>User Profile</h2>
+    <p><strong>Name:</strong> <%= email.split('@')[0] %></p>
+    <p><strong>Email:</strong><%= email %></p>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 LearnHub. All rights reserved.</p>
+  </footer>
+</body>
+</html>
